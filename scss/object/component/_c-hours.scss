@@ -1,0 +1,90 @@
+@use "../../foundation/mixin" as bp;
+
+// ============================================================
+//  Component / c-hours — 診療時間表
+//  マニュアル：表は画像ではなくテキスト＋CSSで実装
+//  黄枠（TOP）と白カード（ACCESS内）の2バリエーション
+// ============================================================
+
+.c-hours {
+  padding: 0.8rem 1.4rem;
+  background: var(--white);
+  border: 3px solid var(--yellow);
+  border-radius: 2rem;
+
+  &--plain {
+    border: none;
+    border-radius: 1.8rem;
+    padding: 1.2rem 1.4rem;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+
+    th,
+    td {
+      padding: 1.6rem 0.2rem;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+
+      @include bp.breakpoint(sp) {
+        padding: 1.3rem 0.1rem;
+        font-size: 1.35rem;
+      }
+    }
+
+    th:first-child,
+    td:first-child {
+      width: 23%;
+      white-space: nowrap;
+    }
+
+    thead th {
+      border-bottom: 2px solid var(--yellow);
+    }
+
+    tbody tr + tr th,
+    tbody tr + tr td {
+      border-top: 2px solid var(--yellow);
+    }
+
+    // ●＝水色丸
+    .is-open::before {
+      content: "";
+      display: inline-block;
+      width: 1.6rem;
+      height: 1.6rem;
+      background: var(--lblue-d);
+      border-radius: 50%;
+      vertical-align: middle;
+
+      @include bp.breakpoint(sp) {
+        width: 1.3rem;
+        height: 1.3rem;
+      }
+    }
+
+    // 休診＝ピンク
+    .is-close {
+      color: var(--pink);
+      font-size: 1.45rem;
+
+      @include bp.breakpoint(sp) {
+        font-size: 1.15rem;
+      }
+    }
+  }
+
+  &--plain &__table thead th {
+    border-bottom-color: #efe6d0;
+  }
+  &--plain &__table tbody tr + tr th,
+  &--plain &__table tbody tr + tr td {
+    border-top-color: #efe6d0;
+  }
+}

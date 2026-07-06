@@ -1,0 +1,168 @@
+@use "../../foundation/mixin" as bp;
+
+// ============================================================
+//  Component / c-wp — WordPressテーマ化を見越した指定コード用
+//  クラス名はマニュアル指定に厳密準拠
+// ============================================================
+
+.aside-content {
+  padding: 3rem 2.4rem;
+  background: var(--white);
+  border: 1px solid #e6e0d2;
+  border-radius: 1rem;
+
+  .aside-ttl {
+    margin-bottom: 1.4rem;
+    padding-bottom: 1rem;
+    font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--blue);
+    border-bottom: 2px solid var(--lblue);
+  }
+}
+
+.cat-item {
+  border-bottom: 1px solid #eee7d8;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 0.4rem;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: var(--blue);
+    }
+  }
+}
+
+.posts_count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.4rem;
+  height: 2.4rem;
+  padding: 0 0.6rem;
+  font-size: 1.2rem;
+  color: var(--white);
+  background: var(--lblue-d);
+  border-radius: 999px;
+}
+
+.pageNation {
+  margin-top: 5rem;
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .page-numbers {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.6rem;
+    height: 4.6rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    color: var(--lblue-d);
+    background: var(--white);
+    border: 1.5px solid var(--lblue);
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      color: var(--white);
+      background: var(--lblue-d);
+    }
+
+    &.current {
+      color: var(--white);
+      background: var(--lblue-d);
+      border-color: var(--lblue-d);
+    }
+
+    &.prev::before,
+    &.next::before {
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      border-top: 2px solid var(--lblue-d);
+      border-right: 2px solid var(--lblue-d);
+    }
+    &.prev::before {
+      transform: rotate(-135deg);
+      margin-left: 0.3rem;
+    }
+    &.next::before {
+      transform: rotate(45deg);
+      margin-right: 0.3rem;
+    }
+  }
+}
+
+.pagerLink {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 5rem;
+
+  @include bp.breakpoint(sp) {
+    flex-direction: column;
+  }
+
+  li {
+    flex: 1;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    font-size: 1.4rem;
+    background: var(--white);
+    border: 1.5px solid var(--lblue);
+    border-radius: 999px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--lblue-d);
+    }
+
+    &::before {
+      content: "";
+      width: 0.9rem;
+      height: 0.9rem;
+      flex: 0 0 auto;
+      border-top: 2px solid currentColor;
+      border-right: 2px solid currentColor;
+    }
+  }
+
+  .prev a::before {
+    transform: rotate(-135deg);
+  }
+
+  .next a {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    text-align: right;
+
+    &::before {
+      transform: rotate(45deg);
+    }
+  }
+}

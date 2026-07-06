@@ -1,0 +1,91 @@
+@use "../../foundation/mixin" as bp;
+
+// ============================================================
+//  Project / message — 青波・円形院長写真・白文字メッセージ
+// ============================================================
+
+.p-message {
+  color: var(--white);
+
+  // 白→青の波
+  &__wave {
+    line-height: 0;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 7.5rem;
+
+      @include bp.breakpoint(sp) {
+        height: 5.5rem;
+      }
+    }
+  }
+
+  &__body {
+    background: var(--blue);
+    padding: 3rem 0 7rem;
+    margin-top: -1px;
+  }
+
+  &__photo {
+    position: relative;
+    width: min(72%, 42rem);
+    aspect-ratio: 1;
+    margin: -8.5rem auto 4rem;
+
+    @include bp.breakpoint(sp) {
+      margin-top: -6.5rem;
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #cde4f2;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+  }
+
+  // オレンジの花（左下）
+  &__flower {
+    position: absolute;
+    left: -1rem;
+    bottom: 0.6rem;
+    width: 8.6rem;
+
+    @include bp.breakpoint(sp) {
+      width: 6.6rem;
+    }
+  }
+
+  &__catch {
+    text-align: center;
+    font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+
+    @include bp.breakpoint(sp) {
+      font-size: 2.3rem;
+    }
+  }
+
+  &__texts {
+    max-width: 620px;
+    margin: 4rem auto 0;
+
+    .c-text {
+      color: var(--white);
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+@use "../../foundation/mixin" as bp;
+
+// ============================================================
+//  Project / access — 病院情報（ベージュ角丸カード・表・地図）
+// ============================================================
+
+.p-access {
+  background: var(--white);
+  padding-bottom: 4rem;
+
+  &__card {
+    max-width: 860px;
+    margin-inline: auto;
+    padding: 6rem 3rem 4rem;
+    background: var(--beige);
+    border-radius: 4rem;
+    text-align: center;
+
+    @include bp.breakpoint(sp) {
+      padding: 4.5rem 2rem 3rem;
+      border-radius: 3rem;
+    }
+  }
+
+  &__logo {
+    width: 12rem;
+    height: 12rem;
+    margin-inline: auto;
+
+    @include bp.breakpoint(sp) {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+
+  &__name {
+    margin-top: 1.8rem;
+    font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    letter-spacing: 0.14em;
+    color: var(--logo-green);
+
+    @include bp.breakpoint(sp) {
+      font-size: 2.1rem;
+    }
+  }
+
+  &__address,
+  &__tel {
+    margin-top: 1.4rem;
+    font-weight: 700;
+    font-size: 1.7rem;
+    letter-spacing: 0.06em;
+
+    @include bp.breakpoint(sp) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__hours {
+    margin-top: 3rem;
+    text-align: left;
+  }
+
+  &__notes {
+    margin-top: 1.8rem;
+    text-align: left;
+    font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2;
+
+    @include bp.breakpoint(sp) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__map {
+    margin-top: 2.4rem;
+    aspect-ratio: 4 / 3;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    background: #e8e0cf;
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+}

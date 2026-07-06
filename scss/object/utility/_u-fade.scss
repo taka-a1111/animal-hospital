@@ -1,0 +1,24 @@
+@use "../../foundation/mixin" as bp;
+
+// ============================================================
+//  Utility / u-fade — スクロールフェード（JSで.is-in付与）
+//  マニュアル：過剰なアニメーション不要・フェード程度
+// ============================================================
+
+.u-fade {
+  opacity: 0;
+  transform: translateY(3.6rem);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+  will-change: opacity, transform;
+
+  &.is-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@for $i from 1 through 4 {
+  .u-fade--d#{$i} {
+    transition-delay: #{$i * 0.12}s;
+  }
+}

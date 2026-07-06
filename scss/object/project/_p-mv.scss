@@ -1,0 +1,122 @@
+@use "../../foundation/mixin" as bp;
+
+// ============================================================
+//  Project / mv — 空色・白フチ角丸写真・雲＋鳥・黄フチ吹き出し・花
+//  マニュアル：メインビューは画面幅いっぱい
+// ============================================================
+
+.p-mv {
+  position: relative;
+  padding: 11.5rem 1.6rem 0;
+  background: var(--sky);
+  overflow: hidden;
+
+  @include bp.breakpoint(sp) {
+    padding-top: 10rem;
+  }
+
+  // 雲＋鳥（写真右上に重なる）
+  &__cloud {
+    position: absolute;
+    top: 8.6rem;
+    right: -1rem;
+    width: 23rem;
+    z-index: 3;
+
+    @include bp.breakpoint(sp) {
+      top: 7.6rem;
+      width: 17rem;
+    }
+  }
+
+  // 写真：白の太フチ・全隅角丸
+  &__photo {
+    max-width: 1100px;
+    margin-inline: auto;
+    aspect-ratio: 16 / 9;
+    border: 0.9rem solid var(--white);
+    border-radius: 3.2rem;
+    overflow: hidden;
+    background: #e9f4f9;
+
+    // SPは縦長トリミング（デザインSP見本準拠）
+    @include bp.breakpoint(sp) {
+      aspect-ratio: 4 / 5;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // 雲形吹き出し（黄フチ）※写真下辺に重ねる
+  &__bubble {
+    position: relative;
+    z-index: 4;
+    width: min(88%, 56rem);
+    margin: -6.5rem auto 0;
+    padding: 3rem 2rem 2.4rem;
+    text-align: center;
+    background: var(--white);
+    border: 3px solid #f7d64e;
+    border-radius: 48% 52% 46% 54% / 60% 58% 42% 40%;
+    box-shadow: 0 0.6rem 2rem rgba(46, 127, 184, 0.12);
+
+    @include bp.breakpoint(sp) {
+      margin-top: -5.2rem;
+      padding: 2.4rem 1.6rem 2rem;
+    }
+  }
+
+  &__catch {
+    font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.7;
+    letter-spacing: 0.14em;
+
+    @include bp.breakpoint(sp) {
+      font-size: 2.3rem;
+    }
+
+    .is-pink {
+      color: var(--pink);
+    }
+    .is-green {
+      color: var(--green);
+    }
+    .is-orange {
+      color: var(--orange);
+    }
+  }
+
+  &__catch-en {
+    display: block;
+    margin-top: 0.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    color: var(--green);
+
+    @include bp.breakpoint(sp) {
+      font-size: 1.1rem;
+    }
+  }
+
+  // ピンクの花（吹き出し右下）
+  &__flower {
+    position: absolute;
+    right: 3%;
+    bottom: -0.5rem;
+    width: 7.6rem;
+    z-index: 3;
+
+    @include bp.breakpoint(sp) {
+      width: 5.8rem;
+      right: 1.5%;
+    }
+  }
+}

@@ -1,0 +1,128 @@
+@use "../../foundation/mixin" as bp;
+
+// ============================================================
+//  Project / philosophy — 全幅の方眼紙（水平垂直・回転なし）
+//  青(MESSAGE)→波→方眼紙。理念カード01〜04（各タイトルはfig抽出値）
+// ============================================================
+
+.p-philosophy {
+  position: relative;
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(rgba(46, 127, 184, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(46, 127, 184, 0.10) 1px, transparent 1px);
+  background-size: 4.8rem 4.8rem;
+  padding-bottom: 9rem;
+
+  @include bp.breakpoint(sp) {
+    background-size: 4rem 4rem;
+  }
+
+  // 青→方眼紙の波
+  &__wave {
+    line-height: 0;
+    margin-bottom: 4.5rem;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 10rem;
+
+      @include bp.breakpoint(sp) {
+        height: 7rem;
+      }
+    }
+  }
+
+  &__lead {
+    max-width: 560px;
+    margin: 4rem auto 0;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 2.1;
+
+    @include bp.breakpoint(sp) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 7.5rem;
+    max-width: 640px;
+    margin: 7rem auto 0;
+
+    @include bp.breakpoint(sp) {
+      gap: 6rem;
+      margin-top: 5.5rem;
+    }
+  }
+}
+
+// 理念カード
+.p-ideal {
+  position: relative;
+  padding-top: 4.2rem; // ナンバーが写真左上に半分重なる余白
+
+  @include bp.breakpoint(sp) {
+    padding-top: 3.4rem;
+  }
+
+  &__num {
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9.2rem;
+    height: 9.2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--white);
+    background: var(--purple);
+    border-radius: 56% 44% 52% 48% / 47% 56% 44% 53%;
+
+    @include bp.breakpoint(sp) {
+      width: 7.2rem;
+      height: 7.2rem;
+      font-size: 2.4rem;
+      left: -0.4rem;
+    }
+  }
+
+  &__img {
+    aspect-ratio: 16 / 10;
+    border-radius: 2.6rem;
+    overflow: hidden;
+    background: #d9d9d9;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    margin-top: 3rem;
+    text-align: center;
+    font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 0.08em;
+    color: var(--blue);
+
+    @include bp.breakpoint(sp) {
+      margin-top: 2.4rem;
+      font-size: 1.75rem;
+    }
+  }
+
+  &__text {
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,75 @@
+@use "../../foundation/mixin" as bp;
+
+// ============================================================
+//  Component / c-heading — 英字大＋日本語（NEWS/PHILOSOPHY型）
+// ============================================================
+
+.c-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  text-align: center;
+
+  &__en {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 3.6rem;
+    letter-spacing: 0.26em;
+    line-height: 1.25;
+    color: var(--lblue);
+    text-transform: uppercase;
+
+    @include bp.breakpoint(sp) {
+      font-size: 2.8rem;
+      letter-spacing: 0.2em;
+    }
+  }
+
+  &__ja {
+    font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 0.24em;
+    color: var(--orange);
+
+    @include bp.breakpoint(sp) {
+      font-size: 1.6rem;
+    }
+  }
+
+  // 英字が青（HOSPITAL SUBJECT）
+  &--blue &__en {
+    color: var(--blue);
+  }
+  &--blue &__ja {
+    color: var(--text);
+    letter-spacing: 0.3em;
+  }
+
+  // 日本語のみ・黒（診療対象）
+  &--plain &__ja {
+    font-size: 2.3rem;
+    letter-spacing: 0.16em;
+    color: var(--text);
+
+    @include bp.breakpoint(sp) {
+      font-size: 2rem;
+    }
+  }
+}
+
+// 本文段落
+.c-text {
+  font-size: 1.6rem;
+  line-height: 2;
+  letter-spacing: 0.02em;
+
+  @include bp.breakpoint(sp) {
+    font-size: 1.5rem;
+  }
+
+  & + & {
+    margin-top: 2rem;
+  }
+}

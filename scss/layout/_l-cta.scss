@@ -1,0 +1,65 @@
+@use "../foundation/mixin" as bp;
+
+// ============================================================
+//  Layout / cta — 画面下固定（WEB予約／電話）
+// ============================================================
+
+.l-cta {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 90;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  pointer-events: none;
+
+  &__btn {
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    flex: 1;
+    max-width: 32rem;
+    padding: 1.5rem 1rem;
+    font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+    letter-spacing: 0.1em;
+    color: var(--white);
+    border-radius: 1.3rem 1.3rem 0 0;
+    box-shadow: 0 -0.3rem 1.4rem rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s var(--ease), filter 0.3s ease;
+
+    &:hover {
+      transform: translateY(-0.3rem);
+      filter: brightness(1.06);
+    }
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+      flex: 0 0 auto;
+    }
+
+    &--reserve {
+      background: var(--orange);
+    }
+
+    &--tel {
+      background: var(--blue);
+      font-family: "Montserrat", "Zen Maru Gothic", sans-serif;
+      letter-spacing: 0.03em;
+    }
+  }
+
+  @include bp.breakpoint(sp) {
+    gap: 0.4rem;
+
+    &__btn {
+      max-width: none;
+      font-size: 1.6rem;
+      border-radius: 1.2rem 1.2rem 0 0;
+    }
+  }
+}

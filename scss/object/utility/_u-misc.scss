@@ -1,0 +1,34 @@
+@use "../../foundation/mixin" as bp;
+
+// ============================================================
+//  Utility / misc — 改行制御・視覚非表示
+// ============================================================
+
+// PCのみ改行
+.u-br-pc {
+  @include bp.breakpoint(sp) {
+    display: none;
+  }
+}
+
+// SPのみ改行
+.u-br-sp {
+  display: none;
+
+  @include bp.breakpoint(sp) {
+    display: inline;
+  }
+}
+
+// スクリーンリーダー専用
+.u-vh {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

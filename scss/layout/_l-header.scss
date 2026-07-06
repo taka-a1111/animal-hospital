@@ -1,0 +1,152 @@
+@use "../foundation/mixin" as bp;
+
+// ============================================================
+//  Layout / header — 透過・雲形チップ2つ（ブランド／MENU）
+// ============================================================
+
+.l-header {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  padding: 0.8rem 1rem 0;
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  // 左：雲チップ（ロゴ＋病院名＋住所）
+  &__brand {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    padding: 1.7rem 3.2rem 1.7rem 1.7rem;
+    isolation: isolate;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background: var(--white);
+      border-radius: 50%;
+      z-index: -1;
+    }
+    // 雲本体（大きな角丸）＋ふくらみ
+    &::before {
+      inset: 0;
+      border-radius: 46% 54% 58% 42% / 78% 82% 62% 68%;
+    }
+    &::after {
+      width: 6.6rem;
+      height: 6.6rem;
+      top: -1.5rem;
+      right: 20%;
+    }
+  }
+
+  &__logo {
+    width: 5rem;
+    height: 5rem;
+    flex: 0 0 auto;
+
+    @include bp.breakpoint(sp) {
+      width: 4.4rem;
+      height: 4.4rem;
+    }
+  }
+
+  &__brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.35;
+  }
+
+  &__name {
+    font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 1.9rem;
+    letter-spacing: 0.1em;
+    color: var(--logo-green);
+
+    @include bp.breakpoint(sp) {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__address {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text);
+    white-space: nowrap;
+
+    @include bp.breakpoint(sp) {
+      font-size: 1.2rem;
+    }
+  }
+
+  // 右：雲のMENUボタン
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    flex: 0 0 auto;
+  }
+
+  &__menu-cloud {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.6rem;
+    height: 5.4rem;
+    isolation: isolate;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background: var(--white);
+      border-radius: 50%;
+      z-index: -1;
+    }
+    &::before {
+      inset: 0;
+      border-radius: 52% 48% 46% 54% / 62% 66% 38% 44%;
+    }
+    &::after {
+      width: 3.4rem;
+      height: 3.4rem;
+      top: -1rem;
+      left: 1.1rem;
+    }
+  }
+
+  &__bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    width: 2.8rem;
+
+    span {
+      height: 2.5px;
+      border-radius: 2px;
+      background: var(--text);
+    }
+  }
+
+  &__menu-label {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.16em;
+    color: var(--text);
+  }
+}

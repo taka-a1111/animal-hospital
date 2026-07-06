@@ -1,0 +1,99 @@
+@use "../../foundation/mixin" as bp;
+
+// ============================================================
+//  Project / hours — 診療時間（黄枠カード＋注記）・診療対象
+// ============================================================
+
+.p-hours {
+  background: var(--white);
+  padding-bottom: 7rem;
+
+  &__card {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  &__notes {
+    max-width: 760px;
+    margin: 2rem auto 0;
+    font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2;
+
+    @include bp.breakpoint(sp) {
+      font-size: 1.45rem;
+    }
+  }
+}
+
+// 診療対象
+.p-target {
+  background: var(--white);
+  padding-bottom: 8rem;
+  text-align: center;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 3.6rem;
+    margin-top: 3.4rem;
+
+    @include bp.breakpoint(sp) {
+      gap: 2rem;
+      margin-top: 2.8rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  &__icon {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 9rem;
+    height: 9rem;
+
+    @include bp.breakpoint(sp) {
+      width: 7rem;
+      height: 7rem;
+    }
+
+    // 後ろの水色丸
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-42%);
+      width: 78%;
+      height: 78%;
+      background: #dcecf1;
+      border-radius: 50%;
+    }
+
+    svg {
+      position: relative;
+      width: 84%;
+      height: auto;
+      fill: #6b5b4e;
+    }
+  }
+
+  &__name {
+    font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+
+    @include bp.breakpoint(sp) {
+      font-size: 1.4rem;
+    }
+  }
+}

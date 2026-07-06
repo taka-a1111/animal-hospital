@@ -1,0 +1,20 @@
+// ============================================================
+//  Layout / footer — デザイン未提供のため最小構成
+// ============================================================
+
+.l-footer {
+  background: var(--white);
+  padding-bottom: 8rem; // 固定CTAとの重なり回避
+
+  &__inner {
+    padding-block: 3rem;
+    text-align: center;
+  }
+
+  &__copy {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    color: var(--text-l);
+  }
+}

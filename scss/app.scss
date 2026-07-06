@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// ============================================================
+//  MiU動物病院 TOP - app.scss (FLOCSS)
+// ============================================================
+
+// Foundation
+@use "foundation/reset";
+@use "foundation/mixin";
+@use "foundation/base";
+
+// Layout
+@use "layout/l-header";
+@use "layout/l-menu";
+@use "layout/l-main";
+@use "layout/l-cta";
+@use "layout/l-footer";
+
+// Object / Component
+@use "object/component/c-heading";
+@use "object/component/c-button";
+@use "object/component/c-hours";
+@use "object/component/c-wp";
+
+// Object / Project
+@use "object/project/p-mv";
+@use "object/project/p-news";
+@use "object/project/p-hours";
+@use "object/project/p-message";
+@use "object/project/p-philosophy";
+@use "object/project/p-features";
+@use "object/project/p-subject";
+@use "object/project/p-qa";
+@use "object/project/p-access";
+
+// Object / Utility
+@use "object/utility/u-fade";
+@use "object/utility/u-misc";

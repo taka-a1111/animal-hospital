@@ -1,0 +1,124 @@
+@use "../../foundation/mixin" as bp;
+
+// ============================================================
+//  Project / news — 白の大カーブ・木2本・3色バッジ・点線
+// ============================================================
+
+.p-news {
+  background: var(--sky);
+  padding-bottom: 6rem;
+
+  &__body {
+    background: var(--white);
+    border-radius: 50% 50% 0 0 / 9rem 9rem 0 0;
+    padding: 6rem 0 5rem;
+
+    @include bp.breakpoint(sp) {
+      border-radius: 50% 50% 0 0 / 5.5rem 5.5rem 0 0;
+      padding-top: 4.5rem;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+
+    @include bp.breakpoint(sp) {
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__tree {
+    width: 4.4rem;
+    flex: 0 0 auto;
+
+    @include bp.breakpoint(sp) {
+      width: 3.6rem;
+    }
+  }
+
+  &__list {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  &__item {
+    border-bottom: 2px dashed var(--lblue);
+  }
+
+  &__link {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 0.4rem 2rem;
+    padding: 2.2rem 0.4rem;
+
+    &:hover .c-arrow {
+      transform: translateX(0.5rem);
+    }
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  &__date {
+    font-family: "Montserrat", "Zen Maru Gothic", sans-serif;
+    font-weight: 600;
+    font-size: 1.7rem;
+    letter-spacing: 0.04em;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 9.6rem;
+    padding: 0.3rem 1.8rem;
+    font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    color: var(--white);
+    border-radius: 999px;
+
+    &--green {
+      background: var(--green);
+    }
+    &--pink {
+      background: var(--pink);
+    }
+    &--blue {
+      background: var(--lblue-d);
+    }
+  }
+
+  &__title {
+    grid-column: 1;
+    font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+    letter-spacing: 0.05em;
+
+    @include bp.breakpoint(sp) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__arrow {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+}

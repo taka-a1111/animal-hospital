@@ -1,0 +1,63 @@
+@use "../../foundation/mixin" as bp;
+
+// ============================================================
+//  Component / c-button
+// ============================================================
+
+// 水色アウトラインpill（お知らせ一覧）
+.c-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  min-width: 23rem;
+  padding: 1.3rem 3.4rem;
+  font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  color: var(--lblue-d);
+  background: var(--white);
+  border: 2.5px solid var(--lblue);
+  border-radius: 999px;
+  box-shadow: 0 0 0 0.5rem rgba(155, 215, 234, 0.28);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s var(--ease);
+
+  &:hover {
+    background: var(--lblue-d);
+    color: var(--white);
+    transform: translateY(-0.2rem);
+  }
+
+  &__arrow {
+    width: 1.1rem;
+    height: 1.1rem;
+    border-top: 2.5px solid currentColor;
+    border-right: 2.5px solid currentColor;
+    transform: rotate(45deg);
+    flex: 0 0 auto;
+  }
+}
+
+// オレンジの丸矢印（NEWS）
+.c-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  flex: 0 0 auto;
+  background: var(--orange);
+  border-radius: 50%;
+  transition: transform 0.3s var(--ease);
+
+  &::before {
+    content: "";
+    width: 0.9rem;
+    height: 0.9rem;
+    margin-right: 0.2rem;
+    border-top: 2.5px solid var(--white);
+    border-right: 2.5px solid var(--white);
+    transform: rotate(45deg);
+  }
+}

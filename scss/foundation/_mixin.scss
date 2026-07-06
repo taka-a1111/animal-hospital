@@ -1,0 +1,44 @@
+//media-queryは今後廃止の方向に進んでいく。
+//font-sizeは可能な限りremで統一
+@mixin breakpoint($point) {
+  // ブラウザサイズ1024pxより小さい時
+  @if $point == tablet {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+  // ブラウザサイズ599pxより小さい時
+  @if $point == sp {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+}
+
+// fontはここに集約
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  box-sizing: border-box;
+  color: #444;
+  font-size: 16px; // マニュアル準拠：font-sizeはbodyにpx、他要素はrem
+  font-weight: 500;
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+// 丸ゴシック（見出し・キャッチ・ボタン等。figのZenMaruGothic-Bold準拠）
+.maru {
+  font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+  font-weight: 700;
+}
+
+// 共通項目があれば
+.inner {
+  max-width: 1200px;
+  margin: auto;
+}
