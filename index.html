@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/app.css" />
+
+    <!-- Google Fonts（fig使用フォント：Noto Sans JP / Zen Maru Gothic / Montserrat） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@500;700&family=Zen+Maru+Gothic:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- OGP設定　記載必要 -->
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="MiU動物病院" />
+    <meta property="og:title" content="MiU動物病院｜価値ある医療を もっと身近に。" />
+    <meta property="og:description" content="MiU動物病院は、動物とご家族に寄り添い、安心して通っていただける医療を大切にしています。犬・猫・うさぎ・ハムスターに対応。三浦海岸駅から徒歩1分。" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>MiU動物病院｜価値ある医療を もっと身近に。</title>
+    <meta name="description" content="MiU動物病院は、動物とご家族に寄り添い、安心して通っていただける医療を大切にしています。犬・猫・うさぎ・ハムスターの診療に対応。24時間Web予約・三浦海岸駅から徒歩1分。" />
+  </head>
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="l-header">
+      <div class="l-header__inner">
+        <a href="./index.html" class="l-header__brand" aria-label="MiU動物病院 トップへ">
+          <img class="l-header__logo" src="images/logo_round.png" alt="" width="240" height="240" />
+          <span class="l-header__brand-text">
+            <span class="l-header__name">MiU動物病院</span>
+            <span class="l-header__address">南下浦町上宮田1528-15 1F</span>
+          </span>
+        </a>
+
+        <button class="l-header__menu" id="js-menu-open" type="button" aria-label="メニューを開く" aria-controls="js-menu" aria-expanded="false">
+          <span class="l-header__menu-cloud">
+            <span class="l-header__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          </span>
+          <span class="l-header__menu-label">MENU</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ================= 全画面メニュー ================= -->
+    <div class="l-menu" id="js-menu" aria-hidden="true">
+      <div class="l-menu__close-row">
+        <button class="l-menu__close" id="js-menu-close" type="button" aria-label="メニューを閉じる">
+          <span class="l-menu__close-cloud"><span class="l-menu__x" aria-hidden="true"></span></span>
+          <span class="l-menu__close-label">MENU</span>
+        </button>
+      </div>
+
+      <nav class="l-menu__nav" aria-label="グローバルナビゲーション">
+        <ul class="l-menu__list">
+          <!-- 下層ページ未制作のためリンクは仮（#） -->
+          <li class="l-menu__item"><a href="#" class="l-menu__link"><span class="l-menu__ja">初めての方へ</span><span class="l-menu__en">First</span></a></li>
+          <li class="l-menu__item"><a href="#" class="l-menu__link"><span class="l-menu__ja">スタッフ・病院紹介</span><span class="l-menu__en">Staff</span></a></li>
+          <li class="l-menu__item"><a href="#" class="l-menu__link"><span class="l-menu__ja">診療案内</span><span class="l-menu__en">About</span></a></li>
+          <li class="l-menu__item"><a href="#" class="l-menu__link"><span class="l-menu__ja">循環器科診療</span><span class="l-menu__en">Cardiology</span></a></li>
+          <li class="l-menu__item"><a href="#" class="l-menu__link"><span class="l-menu__ja">採用情報</span><span class="l-menu__en">Recruit</span></a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="l-main">
+      <!-- ================= MV ================= -->
+      <section class="p-mv">
+        <img class="p-mv__cloud" src="images/cloud_big.png" alt="" width="800" height="573" />
+
+        <div class="p-mv__photo u-fade">
+          <img src="images/mv.jpg" alt="MiU動物病院の受付" />
+        </div>
+
+        <div class="p-mv__bubble u-fade u-fade--d1">
+          <p class="p-mv__catch">
+            <span class="is-pink">価値</span>ある<span class="is-green">医療</span>を<br />
+            もっと<span class="is-orange">身近</span>に。
+            <span class="p-mv__catch-en">Bringing healthcare closer to you</span>
+          </p>
+        </div>
+
+        <svg class="p-mv__flower" viewBox="0 0 100.0 106.8" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M58.8 86.3L55.4 86.1L51.2 85.3L46.6 84.1L42.5 84.2L38.6 85.0L34.2 85.4L29.8 85.2L26.7 84.1L24.8 82.4L23.7 80.3L23.1 78.1L22.2 76.5L20.3 75.1L15.1 73.2L8.3 71.0L4.4 69.0L2.8 67.2L1.3 64.5L0.1 61.3L-0.5 58.3L-0.2 55.1L1.3 50.8L3.3 45.5L3.9 39.7L3.7 33.9L4.4 29.2L5.9 25.6L8.1 22.6L11.2 20.0L16.6 17.6L23.5 14.7L29.7 10.0L35.1 4.5L39.6 1.3L43.7 0.1L48.9 -0.1L55.0 0.6L60.8 2.6L66.1 5.6L69.9 9.1L72.2 12.9L73.5 15.9L74.9 18.6L80.2 22.6L87.9 27.4L92.9 31.4L95.7 34.9L97.8 38.3L99.0 41.8L99.5 46.0L99.4 50.4L98.8 53.3L97.7 55.3L95.7 57.6L92.5 60.3L87.1 63.7L80.4 67.7L74.9 72.8L70.5 78.4L66.3 82.5L62.8 85.2L61.3 86.3L60.9 86.3ZM54.3 67.4L55.6 67.0L57.1 66.3L58.9 65.1L60.9 63.5L63.1 61.5L65.0 59.6L66.5 57.9L67.6 56.4L68.3 55.0L68.9 53.1L69.3 50.9L69.7 48.2L69.9 45.2L69.9 42.5L69.7 40.1L69.2 38.1L68.5 36.4L67.7 34.9L66.7 33.4L65.5 32.0L64.2 30.7L62.6 29.5L60.8 28.2L58.7 27.0L56.4 25.8L54.1 24.9L51.8 24.2L49.6 23.7L47.5 23.5L45.4 23.5L43.3 23.7L41.2 24.2L39.0 24.9L36.9 25.9L34.7 27.3L32.5 29.0L30.2 31.0L28.4 32.8L26.9 34.5L25.8 36.1L25.1 37.5L24.5 39.2L24.1 41.0L23.7 43.2L23.5 45.5L23.5 47.9L23.9 50.4L24.5 52.9L25.5 55.5L26.7 58.0L28.2 60.3L29.9 62.4L31.9 64.4L34.5 66.0L37.7 67.0L41.5 67.6L45.8 67.7L49.1 67.8L51.3 67.9L52.4 67.9L52.4 67.9L52.7 67.8L53.3 67.7Z" fill="#f3a7b4" fill-rule="evenodd"/><path d="M50.0 80.8 v22" stroke="#e58aa0" stroke-width="5" stroke-linecap="round"/></svg>
+      </section>
+
+      <!-- ================= NEWS ================= -->
+      <section class="p-news" id="news">
+        <div class="p-news__body">
+          <div class="inner inner--s">
+            <div class="p-news__head u-fade">
+              <svg class="p-news__tree" viewBox="0 0 44 62" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M22 5 38 39H6L22 5Z" fill="#f4a428" stroke="#f4a428" stroke-width="8" stroke-linejoin="round"/><rect x="19" y="42" width="6" height="18" rx="3" fill="#f4a428"/>
+              </svg>
+              <div class="c-heading">
+                <span class="c-heading__en">News</span>
+                <h2 class="c-heading__ja">お知らせ</h2>
+              </div>
+              <svg class="p-news__tree" viewBox="0 0 44 62" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M22 5 38 39H6L22 5Z" fill="#6fbf63" stroke="#6fbf63" stroke-width="8" stroke-linejoin="round"/><rect x="19" y="42" width="6" height="18" rx="3" fill="#6fbf63"/>
+              </svg>
+            </div>
+
+            <ul class="p-news__list u-fade u-fade--d1">
+              <li class="p-news__item">
+                <a href="#" class="p-news__link">
+                  <span class="p-news__meta">
+                    <time class="p-news__date" datetime="2026-01-01">2026.01.01</time>
+                    <span class="p-news__badge p-news__badge--green">つぶやき</span>
+                  </span>
+                  <span class="p-news__title">ワンちゃんの口臭について</span>
+                  <span class="p-news__arrow c-arrow" aria-hidden="true"></span>
+                </a>
+              </li>
+              <li class="p-news__item">
+                <a href="#" class="p-news__link">
+                  <span class="p-news__meta">
+                    <time class="p-news__date" datetime="2026-01-01">2026.01.01</time>
+                    <span class="p-news__badge p-news__badge--pink">お知らせ</span>
+                  </span>
+                  <span class="p-news__title">健康診断をご希望の飼主さまへ</span>
+                  <span class="p-news__arrow c-arrow" aria-hidden="true"></span>
+                </a>
+              </li>
+              <li class="p-news__item">
+                <a href="#" class="p-news__link">
+                  <span class="p-news__meta">
+                    <time class="p-news__date" datetime="2026-01-01">2026.01.01</time>
+                    <span class="p-news__badge p-news__badge--blue">症例</span>
+                  </span>
+                  <span class="p-news__title">心臓病症例報告②</span>
+                  <span class="p-news__arrow c-arrow" aria-hidden="true"></span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="p-news__more u-fade">
+              <a href="#" class="c-button">お知らせ一覧<span class="c-button__arrow" aria-hidden="true"></span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 診療時間 ================= -->
+      <section class="p-hours" id="hours">
+        <div class="inner inner--s">
+          <div class="p-hours__card c-hours u-fade">
+            <table class="c-hours__table">
+              <thead>
+                <tr>
+                  <th scope="col">診療時間</th>
+                  <th scope="col">月</th><th scope="col">火</th><th scope="col">水</th>
+                  <th scope="col">木</th><th scope="col">金</th><th scope="col">土</th>
+                  <th scope="col">日/祝</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">9:00〜12:00</th>
+                  <td class="is-open"><span class="u-vh">診療</span></td>
+                  <td class="is-open"><span class="u-vh">診療</span></td>
+                  <td class="is-close">休診</td>
+                  <td class="is-open"><span class="u-vh">診療</span></td>
+                  <td class="is-open"><span class="u-vh">診療</span></td>
+                  <td class="is-open"><span class="u-vh">診療</span></td>
+                  <td class="is-open"><span class="u-vh">診療</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">16:00〜19:00</th>
+                  <td class="is-open"><span class="u-vh">診療</span></td>
+                  <td class="is-close">休診</td>
+                  <td class="is-close">休診</td>
+                  <td class="is-open"><span class="u-vh">診療</span></td>
+                  <td class="is-open"><span class="u-vh">診療</span></td>
+                  <td class="is-open"><span class="u-vh">診療</span></td>
+                  <td class="is-open"><span class="u-vh">診療</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="p-hours__notes u-fade">
+            <p>※最終受付は診療時間の30分前まで</p>
+            <p>※火曜日午後・水曜日は終日休診</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 診療対象 ================= -->
+      <section class="p-target" id="target">
+        <div class="inner inner--s u-fade">
+          <div class="c-heading c-heading--plain">
+            <h2 class="c-heading__ja">診療対象</h2>
+          </div>
+
+          <ul class="p-target__list">
+            <li class="p-target__item">
+              <span class="p-target__icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M56.2 97.4L40.6 97.1L33.3 95.4L32.9 92.9L34.4 90.7L36.9 89.0L37.3 87.6L36.4 86.1L36.7 83.0L37.4 79.1L36.6 75.9L34.3 74.9L31.1 80.7L27.6 90.5L25.2 95.6L23.6 96.8L21.3 97.2L19.3 96.4L19.8 93.7L22.1 88.9L24.1 81.4L25.6 72.8L26.3 67.8L26.1 65.3L25.0 62.6L23.4 58.8L22.7 51.8L22.9 43.0L23.6 37.3L24.6 33.7L24.4 30.4L23.1 27.4L20.2 25.9L16.4 25.1L13.9 23.6L13.1 21.4L15.2 18.7L19.0 15.7L21.7 12.4L23.1 9.1L23.0 7.0L22.0 5.7L21.8 4.0L22.4 2.5L24.4 3.2L27.0 5.0L28.3 4.6L28.7 2.7L29.3 1.8L30.6 1.9L33.3 3.9L37.1 7.4L40.4 11.9L43.0 17.6L44.5 24.4L46.2 32.7L52.4 43.3L60.9 54.8L65.6 62.4L67.2 66.7L68.4 69.0L69.8 69.7L73.1 69.3L77.6 68.5L81.0 69.3L83.5 71.4L85.3 73.7L86.2 76.4L86.3 80.7L85.3 85.7L82.7 89.3L79.0 91.6L76.1 92.2L73.8 92.1L71.8 93.7L70.2 96.3L69.6 97.4L67.3 97.4Z" fill-rule="evenodd"/></svg>
+              </span>
+              <span class="p-target__name">犬</span>
+            </li>
+            <li class="p-target__item">
+              <span class="p-target__icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M63.6 97.0L61.3 96.1L59.3 94.4L57.6 92.7L56.2 93.3L54.6 95.3L51.2 96.2L46.6 96.1L42.6 95.8L39.1 95.0L35.9 93.7L32.7 92.1L28.7 91.5L25.1 91.7L26.1 92.6L29.8 94.1L30.5 95.6L28.6 96.9L24.7 97.4L19.6 97.1L15.6 95.9L12.7 93.8L11.5 91.9L11.9 90.1L13.9 88.1L17.7 86.3L23.3 85.6L29.7 85.4L32.9 84.9L33.5 83.5L33.1 80.2L32.2 75.2L32.5 69.0L34.6 61.2L40.2 50.7L47.7 38.7L51.9 28.5L53.9 20.3L56.4 14.7L59.0 11.3L60.5 8.5L61.4 6.2L63.7 4.0L66.6 2.3L68.2 2.3L69.1 3.3L71.2 3.3L73.9 3.0L75.3 3.9L76.3 5.7L78.5 7.3L81.4 8.9L83.0 10.9L83.8 13.1L85.1 14.7L86.7 16.2L87.3 18.9L86.9 22.4L84.7 26.0L81.6 31.4L80.7 44.2L81.0 61.3L80.1 73.0L78.6 80.4L78.3 86.6L78.7 91.4L78.4 93.9L77.2 94.6L75.0 94.6L72.1 94.3L69.1 95.2L66.5 96.7L65.4 97.4L65.1 97.3Z" fill-rule="evenodd"/></svg>
+              </span>
+              <span class="p-target__name">猫</span>
+            </li>
+            <li class="p-target__item">
+              <span class="p-target__icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M61.8 97.3L48.4 97.2L42.4 96.6L42.5 95.5L44.0 93.8L45.8 91.8L44.1 89.6L40.2 87.6L37.9 86.9L36.8 87.8L35.4 91.1L33.4 95.5L29.8 97.3L25.6 97.2L23.2 96.6L22.6 95.2L23.5 92.3L25.2 87.5L26.0 79.3L25.8 69.7L25.0 64.0L23.1 61.3L19.1 58.4L13.9 55.4L10.8 52.4L9.5 49.1L9.7 44.7L11.4 39.4L14.8 34.5L18.7 29.8L19.2 24.7L17.4 19.4L16.7 14.5L17.0 10.0L18.4 6.4L20.8 4.1L23.6 4.4L26.3 7.5L27.8 13.8L28.5 21.5L29.4 25.4L30.6 25.2L32.4 19.9L34.9 11.6L38.1 5.9L41.7 2.8L44.9 2.1L47.5 3.6L48.7 7.3L48.2 12.8L46.2 19.0L43.2 25.3L42.0 30.3L42.2 34.2L43.0 37.3L44.7 40.0L47.9 42.9L53.0 46.0L60.8 49.7L70.1 53.9L76.6 58.9L80.5 64.7L82.5 71.0L83.5 77.2L85.8 81.3L88.5 84.1L88.8 87.4L86.8 90.6L83.7 92.0L79.8 92.3L76.7 94.0L74.3 96.3L73.3 97.3L71.4 97.3Z" fill-rule="evenodd"/></svg>
+              </span>
+              <span class="p-target__name">うさぎ</span>
+            </li>
+            <li class="p-target__item">
+              <span class="p-target__icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M48.8 85.6L40.2 85.2L33.2 84.7L27.9 84.1L24.2 83.4L22.3 82.7L20.0 81.3L17.3 79.5L14.3 77.0L11.0 74.1L8.1 71.2L5.9 68.3L4.2 65.5L3.0 62.8L2.1 60.0L1.5 57.3L1.2 54.5L1.2 51.8L1.7 48.6L2.7 45.1L4.2 41.1L6.1 36.8L8.1 33.0L10.2 29.8L12.3 27.1L14.5 24.9L17.1 23.0L20.1 21.3L23.6 19.9L27.6 18.7L31.8 18.0L36.3 17.8L41.1 18.1L46.3 18.9L50.4 19.4L53.5 19.6L55.7 19.5L56.9 19.1L57.8 18.5L58.5 17.6L59.0 16.5L59.1 15.1L59.4 14.0L59.8 13.2L60.3 12.7L60.9 12.5L61.7 12.7L62.5 13.2L63.6 14.0L64.8 15.2L66.5 16.3L68.9 17.2L71.8 18.1L75.4 18.9L78.6 20.0L81.4 21.5L83.9 23.3L86.1 25.5L88.0 27.6L89.7 29.7L91.1 31.7L92.3 33.7L93.4 36.0L94.4 38.8L95.2 41.9L96.0 45.5L95.9 48.5L94.8 50.9L92.8 52.9L89.8 54.2L87.2 55.2L85.0 55.7L83.0 55.7L81.5 55.3L79.9 55.5L78.2 56.1L76.5 57.4L74.7 59.1L73.5 60.6L72.9 61.8L72.9 62.7L73.5 63.3L74.8 63.6L76.9 63.7L79.7 63.6L83.2 63.2L85.9 63.2L87.7 63.6L88.6 64.4L88.6 65.5L87.9 66.4L86.5 67.0L84.4 67.3L81.7 67.3L79.0 67.7L76.5 68.5L74.0 69.7L71.6 71.2L69.5 72.4L67.5 73.2L65.7 73.6L64.2 73.6L62.6 73.3L61.0 72.7L59.4 71.8L57.9 70.7L56.6 70.6L55.8 71.7L55.2 73.9L55.0 77.2L55.3 79.8L56.1 81.6L57.4 82.6L59.1 82.8L60.5 83.1L61.4 83.6L61.8 84.2L61.8 85.0L61.8 85.6L61.8 86.0L61.8 86.2L61.8 86.2L59.6 86.1L55.3 85.9Z" fill-rule="evenodd"/></svg>
+              </span>
+              <span class="p-target__name">ハムスター</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================= MESSAGE（ごあいさつ） ================= -->
+      <section class="p-message" id="message">
+        <div class="p-message__wave" aria-hidden="true">
+          <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 62C240 12 430 92 720 56S1200 6 1440 46V100H0Z" fill="#2e7fb8"/>
+            <path d="M0 62C240 12 430 92 720 56S1200 6 1440 46" fill="none" stroke="#9bd7ea" stroke-width="12" stroke-linecap="round" opacity="0.6"/>
+          </svg>
+        </div>
+
+        <div class="p-message__body">
+          <div class="inner inner--s">
+            <div class="p-message__photo u-fade">
+              <div class="p-message__photo-img">
+                <img src="images/message.jpg" alt="猫を抱く院長" />
+              </div>
+              <svg class="p-message__flower" viewBox="0 0 100.0 86.8" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M58.8 86.3L55.4 86.1L51.2 85.3L46.6 84.1L42.5 84.2L38.6 85.0L34.2 85.4L29.8 85.2L26.7 84.1L24.8 82.4L23.7 80.3L23.1 78.1L22.2 76.5L20.3 75.1L15.1 73.2L8.3 71.0L4.4 69.0L2.8 67.2L1.3 64.5L0.1 61.3L-0.5 58.3L-0.2 55.1L1.3 50.8L3.3 45.5L3.9 39.7L3.7 33.9L4.4 29.2L5.9 25.6L8.1 22.6L11.2 20.0L16.6 17.6L23.5 14.7L29.7 10.0L35.1 4.5L39.6 1.3L43.7 0.1L48.9 -0.1L55.0 0.6L60.8 2.6L66.1 5.6L69.9 9.1L72.2 12.9L73.5 15.9L74.9 18.6L80.2 22.6L87.9 27.4L92.9 31.4L95.7 34.9L97.8 38.3L99.0 41.8L99.5 46.0L99.4 50.4L98.8 53.3L97.7 55.3L95.7 57.6L92.5 60.3L87.1 63.7L80.4 67.7L74.9 72.8L70.5 78.4L66.3 82.5L62.8 85.2L61.3 86.3L60.9 86.3ZM54.3 67.4L55.6 67.0L57.1 66.3L58.9 65.1L60.9 63.5L63.1 61.5L65.0 59.6L66.5 57.9L67.6 56.4L68.3 55.0L68.9 53.1L69.3 50.9L69.7 48.2L69.9 45.2L69.9 42.5L69.7 40.1L69.2 38.1L68.5 36.4L67.7 34.9L66.7 33.4L65.5 32.0L64.2 30.7L62.6 29.5L60.8 28.2L58.7 27.0L56.4 25.8L54.1 24.9L51.8 24.2L49.6 23.7L47.5 23.5L45.4 23.5L43.3 23.7L41.2 24.2L39.0 24.9L36.9 25.9L34.7 27.3L32.5 29.0L30.2 31.0L28.4 32.8L26.9 34.5L25.8 36.1L25.1 37.5L24.5 39.2L24.1 41.0L23.7 43.2L23.5 45.5L23.5 47.9L23.9 50.4L24.5 52.9L25.5 55.5L26.7 58.0L28.2 60.3L29.9 62.4L31.9 64.4L34.5 66.0L37.7 67.0L41.5 67.6L45.8 67.7L49.1 67.8L51.3 67.9L52.4 67.9L52.4 67.9L52.7 67.8L53.3 67.7Z" fill="#f4a428" fill-rule="evenodd"/></svg>
+            </div>
+
+            <h2 class="p-message__catch u-fade">“価値ある医療”を、<br />もっと身近に。</h2>
+
+            <div class="p-message__texts u-fade">
+              <p class="c-text">MiU動物病院では、「医療的価値」を大切にしています。最先端で高額な医療だけが良い医療ではありません。</p>
+              <p class="c-text">反対に、安さだけを重視した医療でもありません。<br />本当に大切なのは、動物たちと飼い主さんが幸せになれる診療であること。</p>
+              <p class="c-text">必要な医療を、必要な形で。その子にとって無理のない治療を、一緒に考えていく。</p>
+              <p class="c-text">MiU動物病院は、地域のホームドクターとして、日常の小さな不安から専門的な診療まで、安心して相談できる存在を目指しています。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PHILOSOPHY（診療理念） ================= -->
+      <section class="p-philosophy" id="philosophy">
+        <div class="p-philosophy__wave" aria-hidden="true">
+          <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h1440v28c-240 48-430-14-720 18S230 96 0 58V0Z" fill="#2e7fb8"/>
+          </svg>
+        </div>
+
+        <div class="inner inner--s">
+          <div class="c-heading u-fade">
+            <span class="c-heading__en">Philosophy</span>
+            <h2 class="c-heading__ja">診療理念</h2>
+          </div>
+
+          <p class="p-philosophy__lead u-fade">
+            当院は、動物とご家族に寄り添い、安心して通っていただける医療を大切にしています。分かりやすい丁寧な説明と丁寧な診療を通して、その子にとって最善の選択を一緒に考えていきます。
+          </p>
+
+          <ol class="p-philosophy__list">
+            <li class="p-ideal u-fade">
+              <span class="p-ideal__num" aria-hidden="true">01</span>
+              <div class="p-ideal__img">
+                <img src="images/philosophy_01.jpg" alt="" loading="lazy" />
+              </div>
+              <h3 class="p-ideal__title">動物とご家族に寄り添う診療</h3>
+              <p class="p-ideal__text c-text">
+                動物たちは、自分の体調や不調を言葉で伝えることができません。<br />
+                だからこそ当院では、動物の様子だけででなく、ご家族のお話にも丁寧に耳を傾けることを大切にしています。<br />
+                日常の変化や小さな違和感を共有しながら、一緒に考え、納得して進められる診療を心がけています。
+              </p>
+            </li>
+
+            <li class="p-ideal u-fade">
+              <span class="p-ideal__num" aria-hidden="true">02</span>
+              <div class="p-ideal__img">
+                <img src="images/philosophy_02.jpg" alt="" loading="lazy" />
+              </div>
+              <h3 class="p-ideal__title">必要な医療を、適切なかたちで</h3>
+              <!-- 本文はデザイン上01と同一のダミー。実文言受領後に差し替え -->
+              <p class="p-ideal__text c-text">
+                動物たちは、自分の体調や不調を言葉で伝えることができません。<br />
+                だからこそ当院では、動物の様子だけででなく、ご家族のお話にも丁寧に耳を傾けることを大切にしています。<br />
+                日常の変化や小さな違和感を共有しながら、一緒に考え、納得して進められる診療を心がけています。
+              </p>
+            </li>
+
+            <li class="p-ideal u-fade">
+              <span class="p-ideal__num" aria-hidden="true">03</span>
+              <div class="p-ideal__img">
+                <img src="images/philosophy_03.jpg" alt="" loading="lazy" />
+              </div>
+              <h3 class="p-ideal__title">分かりやすく、丁寧な説明を大切に</h3>
+              <p class="p-ideal__text c-text">
+                動物たちは、自分の体調や不調を言葉で伝えることができません。<br />
+                だからこそ当院では、動物の様子だけででなく、ご家族のお話にも丁寧に耳を傾けることを大切にしています。<br />
+                日常の変化や小さな違和感を共有しながら、一緒に考え、納得して進められる診療を心がけています。
+              </p>
+            </li>
+
+            <li class="p-ideal u-fade">
+              <span class="p-ideal__num" aria-hidden="true">04</span>
+              <div class="p-ideal__img">
+                <img src="images/philosophy_04.jpg" alt="" loading="lazy" />
+              </div>
+              <h3 class="p-ideal__title">日常の健康管理から、生涯を支える病院として</h3>
+              <p class="p-ideal__text c-text">
+                動物たちは、自分の体調や不調を言葉で伝えることができません。<br />
+                だからこそ当院では、動物の様子だけででなく、ご家族のお話にも丁寧に耳を傾けることを大切にしています。<br />
+                日常の変化や小さな違和感を共有しながら、一緒に考え、納得して進められる診療を心がけています。
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ================= FEATURES（6つの特徴） ================= -->
+      <section class="p-features" id="features">
+        <div class="p-features__deco" aria-hidden="true">
+          <svg viewBox="0 0 1440 150" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 92c220-58 420 32 720 12s500-68 720-18v64H0Z" fill="#f2e9d6"/>
+            <path d="M-10 90C210 32 430 122 720 102s510-66 740-16" fill="none" stroke="#2e7fb8" stroke-width="34" stroke-linecap="round"/>
+          </svg>
+          <svg class="p-features__flower p-features__flower--yellow" viewBox="0 0 100.0 86.8" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M58.8 86.3L55.4 86.1L51.2 85.3L46.6 84.1L42.5 84.2L38.6 85.0L34.2 85.4L29.8 85.2L26.7 84.1L24.8 82.4L23.7 80.3L23.1 78.1L22.2 76.5L20.3 75.1L15.1 73.2L8.3 71.0L4.4 69.0L2.8 67.2L1.3 64.5L0.1 61.3L-0.5 58.3L-0.2 55.1L1.3 50.8L3.3 45.5L3.9 39.7L3.7 33.9L4.4 29.2L5.9 25.6L8.1 22.6L11.2 20.0L16.6 17.6L23.5 14.7L29.7 10.0L35.1 4.5L39.6 1.3L43.7 0.1L48.9 -0.1L55.0 0.6L60.8 2.6L66.1 5.6L69.9 9.1L72.2 12.9L73.5 15.9L74.9 18.6L80.2 22.6L87.9 27.4L92.9 31.4L95.7 34.9L97.8 38.3L99.0 41.8L99.5 46.0L99.4 50.4L98.8 53.3L97.7 55.3L95.7 57.6L92.5 60.3L87.1 63.7L80.4 67.7L74.9 72.8L70.5 78.4L66.3 82.5L62.8 85.2L61.3 86.3L60.9 86.3ZM54.3 67.4L55.6 67.0L57.1 66.3L58.9 65.1L60.9 63.5L63.1 61.5L65.0 59.6L66.5 57.9L67.6 56.4L68.3 55.0L68.9 53.1L69.3 50.9L69.7 48.2L69.9 45.2L69.9 42.5L69.7 40.1L69.2 38.1L68.5 36.4L67.7 34.9L66.7 33.4L65.5 32.0L64.2 30.7L62.6 29.5L60.8 28.2L58.7 27.0L56.4 25.8L54.1 24.9L51.8 24.2L49.6 23.7L47.5 23.5L45.4 23.5L43.3 23.7L41.2 24.2L39.0 24.9L36.9 25.9L34.7 27.3L32.5 29.0L30.2 31.0L28.4 32.8L26.9 34.5L25.8 36.1L25.1 37.5L24.5 39.2L24.1 41.0L23.7 43.2L23.5 45.5L23.5 47.9L23.9 50.4L24.5 52.9L25.5 55.5L26.7 58.0L28.2 60.3L29.9 62.4L31.9 64.4L34.5 66.0L37.7 67.0L41.5 67.6L45.8 67.7L49.1 67.8L51.3 67.9L52.4 67.9L52.4 67.9L52.7 67.8L53.3 67.7Z" fill="#f5d02f" fill-rule="evenodd"/></svg>
+          <svg class="p-features__flower p-features__flower--orange" viewBox="0 0 100.0 86.8" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M58.8 86.3L55.4 86.1L51.2 85.3L46.6 84.1L42.5 84.2L38.6 85.0L34.2 85.4L29.8 85.2L26.7 84.1L24.8 82.4L23.7 80.3L23.1 78.1L22.2 76.5L20.3 75.1L15.1 73.2L8.3 71.0L4.4 69.0L2.8 67.2L1.3 64.5L0.1 61.3L-0.5 58.3L-0.2 55.1L1.3 50.8L3.3 45.5L3.9 39.7L3.7 33.9L4.4 29.2L5.9 25.6L8.1 22.6L11.2 20.0L16.6 17.6L23.5 14.7L29.7 10.0L35.1 4.5L39.6 1.3L43.7 0.1L48.9 -0.1L55.0 0.6L60.8 2.6L66.1 5.6L69.9 9.1L72.2 12.9L73.5 15.9L74.9 18.6L80.2 22.6L87.9 27.4L92.9 31.4L95.7 34.9L97.8 38.3L99.0 41.8L99.5 46.0L99.4 50.4L98.8 53.3L97.7 55.3L95.7 57.6L92.5 60.3L87.1 63.7L80.4 67.7L74.9 72.8L70.5 78.4L66.3 82.5L62.8 85.2L61.3 86.3L60.9 86.3ZM54.3 67.4L55.6 67.0L57.1 66.3L58.9 65.1L60.9 63.5L63.1 61.5L65.0 59.6L66.5 57.9L67.6 56.4L68.3 55.0L68.9 53.1L69.3 50.9L69.7 48.2L69.9 45.2L69.9 42.5L69.7 40.1L69.2 38.1L68.5 36.4L67.7 34.9L66.7 33.4L65.5 32.0L64.2 30.7L62.6 29.5L60.8 28.2L58.7 27.0L56.4 25.8L54.1 24.9L51.8 24.2L49.6 23.7L47.5 23.5L45.4 23.5L43.3 23.7L41.2 24.2L39.0 24.9L36.9 25.9L34.7 27.3L32.5 29.0L30.2 31.0L28.4 32.8L26.9 34.5L25.8 36.1L25.1 37.5L24.5 39.2L24.1 41.0L23.7 43.2L23.5 45.5L23.5 47.9L23.9 50.4L24.5 52.9L25.5 55.5L26.7 58.0L28.2 60.3L29.9 62.4L31.9 64.4L34.5 66.0L37.7 67.0L41.5 67.6L45.8 67.7L49.1 67.8L51.3 67.9L52.4 67.9L52.4 67.9L52.7 67.8L53.3 67.7Z" fill="#ef7d3a" fill-rule="evenodd"/></svg>
+          <span class="p-features__dots"></span>
+        </div>
+
+        <div class="inner">
+          <div class="c-heading p-features__head u-fade">
+            <span class="c-heading__en">Features</span>
+            <h2 class="c-heading__ja">当院が選ばれる６つの特徴</h2>
+          </div>
+
+          <div class="p-features__list">
+            <article class="p-fcard u-fade">
+              <span class="p-fcard__num" aria-hidden="true">01</span>
+              <div class="p-fcard__body">
+                <div class="p-fcard__img"><img src="images/feature_01.jpg" alt="超音波検査機器" loading="lazy" /></div>
+                <h3 class="p-fcard__title">20年以上、幅広い診療に対応</h3>
+                <p class="p-fcard__text c-text">
+                  MiU動物病院では、20年以上にわたり地域の動物医療に携わってきました。<br />
+                  予防医療から一般診療、慢性疾患、高齢動物のケアまで、幅広い診療に対応しています。<br />
+                  また、他院で診断や治療を受けられている方からのセカンドオピニオンにも対応しております。「今の治療で良いのか不安」「詳しい説明を聞きたい」といった場合も、お気軽にご相談ください。
+                </p>
+              </div>
+            </article>
+
+            <article class="p-fcard u-fade">
+              <span class="p-fcard__num" aria-hidden="true">02</span>
+              <div class="p-fcard__body">
+                <div class="p-fcard__img"><img src="images/feature_02.jpg" alt="猫の循環器検査の様子" loading="lazy" /></div>
+                <h3 class="p-fcard__title">専門的な循環器診療を提供</h3>
+                <p class="p-fcard__text c-text">当院では、獣医師 見上 英樹による循環器特別診療を行っております。</p>
+                <ul class="p-fcard__list">
+                  <li>獣医循環器専門医</li>
+                  <li>日本獣医循環器学会 所属</li>
+                  <li>日本肺高血圧・肺循環学会 所属</li>
+                </ul>
+                <p class="p-fcard__text c-text">心雑音や咳、失神、呼吸の異常など、心臓病に関するご相談を多数いただいております。</p>
+              </div>
+            </article>
+
+            <article class="p-fcard u-fade">
+              <span class="p-fcard__num" aria-hidden="true">03</span>
+              <div class="p-fcard__body">
+                <div class="p-fcard__img"><img src="images/feature_03.jpg" alt="院内の手術室" loading="lazy" /></div>
+                <h3 class="p-fcard__title">検査から外科手術まで、<br />院内で一貫対応</h3>
+                <p class="p-fcard__text c-text">
+                  当院では、各種検査から内科治療、外科手術、術後管理まで、できる限り院内で一貫して対応できる体制を整えています。状態を継続的に把握しながら治療を進めることで、動物たちへの負担軽減にも努めています。<br />
+                  また、救急時には迅速に対応できるよう、酸素管理や心肺蘇生などをすぐに行える体制を整えています。
+                </p>
+                <p class="p-fcard__list-title">対応している主な外科手術</p>
+                <ul class="p-fcard__list p-fcard__list--cols">
+                  <li>避妊・去勢手術</li>
+                  <li>腫瘍切除</li>
+                  <li>消化管内異物摘出</li>
+                  <li>膀胱結石摘出</li>
+                  <li>歯科処置・抜歯</li>
+                  <li>軟部外科</li>
+                  <li>整形外科</li>
+                </ul>
+                <p class="p-fcard__list-title">年間手術件数（例）</p>
+                <ul class="p-fcard__list">
+                  <li>年間手術件数：約80件</li>
+                  <li>避妊・去勢手術：約30件</li>
+                  <li>歯科処置：約40件</li>
+                  <li>軟部外科・整形外科</li>
+                  <li>その他外科：約30件</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="p-fcard u-fade">
+              <span class="p-fcard__num" aria-hidden="true">04</span>
+              <div class="p-fcard__body">
+                <div class="p-fcard__img"><img src="images/feature_04.jpg" alt="受付カウンターでくつろぐ猫" loading="lazy" /></div>
+                <h3 class="p-fcard__title">猫さんに優しい診療を<br />大切にしています</h3>
+                <p class="p-fcard__text c-text">
+                  猫さんは、環境の変化や通院によるストレスを感じやすい動物です。<br />
+                  そのため当院では、猫さんへの負担をできる限り軽減できるよう配慮した診療を行っています。<br />
+                  待合室での過ごし方や診察時の対応にも配慮し、必要に応じて猫さんの性格や状態に合わせたお薬のご提案も行っています。
+                </p>
+              </div>
+            </article>
+
+            <article class="p-fcard u-fade">
+              <span class="p-fcard__num" aria-hidden="true">05</span>
+              <div class="p-fcard__body">
+                <div class="p-fcard__img"><img src="images/feature_05.jpg" alt="診察を受ける猫" loading="lazy" /></div>
+                <h3 class="p-fcard__title">土日も19時まで診療</h3>
+                <p class="p-fcard__text c-text">
+                  平日だけでなく、土日も19時まで診療を行っています。<br />
+                  「平日はなかなか通院が難しい」「休日にゆっくり受診したい」という飼い主様にも、安心してご来院いただける体制を整えています
+                </p>
+              </div>
+            </article>
+
+            <article class="p-fcard u-fade">
+              <span class="p-fcard__num" aria-hidden="true">06</span>
+              <div class="p-fcard__body">
+                <div class="p-fcard__img"><img src="images/feature_06.jpg" alt="明るい院内受付" loading="lazy" /></div>
+                <h3 class="p-fcard__title">24時間Web予約対応・<br />三浦海岸駅から徒歩1分</h3>
+                <p class="p-fcard__text c-text">
+                  当院では、24時間いつでもご利用いただけるWeb予約システムを導入しています。<br />
+                  お仕事や家事の合間でも、スマートフォンから簡単にご予約いただけます。<br />
+                  また、京急久里浜線「三浦海岸駅」から徒歩1分とアクセスしやすく、通院しやすい立地です
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SUBJECT（診療科目） ================= -->
+      <section class="p-subject" id="subject">
+        <div class="p-subject__deco" aria-hidden="true">
+          <svg viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1440" height="110" fill="#f2e9d6"/>
+            <path d="M0 70c260-55 480 25 760 5s440-60 680-15v50H0Z" fill="#ecd88f"/>
+            <path d="M980 38c-30 0-50-14-50-32 0-2 0-4 1-6 22-10 66-8 88 6 18-3 41 1 41 16 0 12-16 16-34 16h-46Z" fill="#fffdf4" opacity="0.9"/>
+            <path d="M600 30c8-9 19-12 27-8-6 1-11 5-13 11-5-3-10-3-14-3Zm52 12c7-8 17-10 24-7-6 1-10 5-12 10-4-2-8-3-12-3Z" fill="#5aa04f"/>
+          </svg>
+        </div>
+
+        <div class="inner">
+          <div class="c-heading c-heading--blue p-subject__head u-fade">
+            <span class="c-heading__en">Hospital<br />Subject</span>
+            <h2 class="c-heading__ja">診療科目</h2>
+          </div>
+
+          <div class="p-subject__grid u-fade">
+            <div class="p-dept">
+              <h3 class="p-dept__title">内科</h3>
+              <ul class="p-dept__list">
+                <li>最近元気がない</li>
+                <li>よく吐く</li>
+                <li>食欲が落ちている</li>
+                <li>体の毛が抜ける</li>
+              </ul>
+              <button class="p-dept__open js-dept-open" type="button" data-dept="内科" aria-label="内科の説明を開く"></button>
+            </div>
+
+            <div class="p-dept">
+              <h3 class="p-dept__title">外科</h3>
+              <ul class="p-dept__list">
+                <li>痛そうにしている</li>
+                <li>歩き方がおかしい</li>
+                <li>座る時に<br />後ろ足を投げ出す</li>
+              </ul>
+              <button class="p-dept__open js-dept-open" type="button" data-dept="外科" aria-label="外科の説明を開く"></button>
+            </div>
+
+            <div class="p-dept">
+              <h3 class="p-dept__title">眼科</h3>
+              <ul class="p-dept__list">
+                <li>眼が痛そう</li>
+                <li>眼が白くなっている</li>
+                <li>白眼が充血している</li>
+                <li>目やにが多い</li>
+              </ul>
+              <button class="p-dept__open js-dept-open" type="button" data-dept="眼科" aria-label="眼科の説明を開く"></button>
+            </div>
+
+            <div class="p-dept">
+              <h3 class="p-dept__title">皮膚耳鼻科</h3>
+              <ul class="p-dept__list">
+                <li>かゆそうにしている</li>
+                <li>脱毛がある</li>
+                <li>赤みがある</li>
+                <li>ブツブツがある</li>
+              </ul>
+              <button class="p-dept__open js-dept-open" type="button" data-dept="皮膚耳鼻科" aria-label="皮膚耳鼻科の説明を開く"></button>
+            </div>
+
+            <div class="p-dept">
+              <h3 class="p-dept__title">歯科</h3>
+              <ul class="p-dept__list">
+                <li>口臭が気になる</li>
+                <li>歯が汚れている</li>
+                <li>できものがある</li>
+              </ul>
+              <button class="p-dept__open js-dept-open" type="button" data-dept="歯科" aria-label="歯科の説明を開く"></button>
+            </div>
+
+            <div class="p-dept">
+              <h3 class="p-dept__title">腎臓・<br />泌尿器科</h3>
+              <ul class="p-dept__list">
+                <li>水をよく飲む</li>
+                <li>よくトイレに通う</li>
+                <li>尿漏れがある</li>
+                <li>食欲がない</li>
+              </ul>
+              <button class="p-dept__open js-dept-open" type="button" data-dept="腎臓・泌尿器科" aria-label="腎臓・泌尿器科の説明を開く"></button>
+            </div>
+
+            <div class="p-dept">
+              <h3 class="p-dept__title">呼吸器科</h3>
+              <ul class="p-dept__list">
+                <li>反応が悪い</li>
+                <li>眠れていない</li>
+                <li>息が荒く、苦しそう</li>
+              </ul>
+              <button class="p-dept__open js-dept-open" type="button" data-dept="呼吸器科" aria-label="呼吸器科の説明を開く"></button>
+            </div>
+
+            <div class="p-dept">
+              <h3 class="p-dept__title">循環器科</h3>
+              <ul class="p-dept__list">
+                <li>急に倒れる</li>
+                <li>呼吸が苦しそう</li>
+                <li>疲れやすい</li>
+              </ul>
+              <a href="#" class="p-dept__link">詳しくはこちら</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 診療科目 説明モーダル -->
+      <div class="p-dept-modal" id="js-dept-modal" aria-hidden="true">
+        <div class="p-dept-modal__bg js-dept-close"></div>
+        <div class="p-dept-modal__panel" role="dialog" aria-modal="true" aria-labelledby="js-dept-modal-title">
+          <div class="p-dept-modal__head">
+            <span class="p-dept-modal__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C7 3 4 6 4 10c0 3 1.5 5 3 7l1.5 3c.3.6 1.2.6 1.5 0L11 17h2l1 3c.3.6 1.2.6 1.5 0L17 17c1.5-2 3-4 3-7 0-4-3-7-8-7Z"/></svg>
+            </span>
+            <span class="p-dept-modal__title" id="js-dept-modal-title">内科</span>
+            <button class="p-dept-modal__close js-dept-close" type="button" aria-label="閉じる"></button>
+          </div>
+          <!-- 説明文はfigに1種のみ収録（下記）。科目別文言は受領後差し替え -->
+          <p class="p-dept-modal__text">
+            元気がない、食欲が落ちている、排便や排尿の様子がいつもと違うなど、一般的に体調不良が見られる動物の診療窓口とお考え下さい。<br />
+            検査・診断を行って投薬などによる治療を行います。外科等ほかの診療が必要な場合にも内科を経由することが多いです。
+          </p>
+        </div>
+      </div>
+
+      <!-- ================= Q&A（よくある質問） ================= -->
+      <section class="p-qa" id="qa">
+        <div class="inner inner--s">
+          <div class="p-qa__head u-fade">
+            <img class="p-qa__deco" src="images/illust_walk.png" alt="" width="226" height="300" loading="lazy" />
+            <div class="c-heading">
+              <span class="c-heading__en">Q&amp;A</span>
+              <h2 class="c-heading__ja">よくある質問</h2>
+            </div>
+            <svg class="p-qa__deco" viewBox="0 0 100.0 76.6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M62.9 18.3L62.0 18.2L61.0 17.9L60.1 17.5L59.2 17.1L58.3 16.5L57.5 15.9L56.7 15.1L56.0 14.2L55.3 13.2L54.9 12.1L54.8 11.0L54.9 9.8L55.3 8.5L55.9 7.4L56.6 6.4L57.6 5.6L58.8 5.0L60.0 4.5L61.1 4.2L62.2 4.0L63.3 4.0L64.5 4.2L65.6 4.4L66.9 4.8L68.2 5.4L69.3 6.0L70.2 6.8L71.0 7.7L71.7 8.7L72.1 9.7L72.3 10.8L72.4 11.9L72.2 13.0L71.9 13.9L71.5 14.8L70.9 15.6L70.3 16.2L69.5 16.8L68.5 17.3L67.4 17.7L66.1 18.1L65.2 18.3L64.6 18.5L64.2 18.6L64.2 18.6L64.0 18.6L63.5 18.5ZM84.0 24.9L83.1 24.7L82.4 24.6L81.8 24.6L81.5 24.7L81.3 24.9L80.8 24.8L80.0 24.5L79.0 24.0L77.6 23.1L76.5 22.2L75.8 21.3L75.3 20.3L75.1 19.2L75.2 18.0L75.6 16.9L76.3 15.7L77.3 14.6L78.5 13.6L79.9 12.9L81.6 12.5L83.4 12.3L85.1 12.4L86.7 12.8L88.2 13.5L89.6 14.6L90.5 15.7L91.1 16.9L91.3 18.2L91.1 19.7L90.7 21.0L89.9 22.1L88.8 23.1L87.5 24.0L86.4 24.6L85.7 25.0L85.4 25.2L85.4 25.2L85.2 25.1L84.7 25.0ZM1.0 41.8L0.8 41.7L0.6 40.8L0.4 39.0L0.4 36.4L0.4 32.9L0.4 30.3L0.6 28.4L0.8 27.3L1.0 27.1L1.5 26.8L2.2 26.7L3.1 26.6L4.2 26.6L5.1 26.9L5.8 27.4L6.2 28.1L6.5 29.2L6.6 30.0L6.5 30.7L6.2 31.3L5.8 31.8L5.2 32.2L4.6 32.4L3.9 32.6L3.1 32.7L2.4 33.3L2.0 34.5L1.7 36.3L1.6 38.5L1.5 40.3L1.5 41.4L1.5 42.0L1.5 42.0L1.4 41.9L1.3 41.9ZM12.9 41.8L12.3 41.7L11.9 41.5L11.9 41.2L12.1 40.8L12.7 40.2L13.1 39.4L13.4 38.3L13.5 37.0L13.5 35.3L13.3 34.1L12.8 33.2L12.0 32.7L11.0 32.6L10.2 32.5L9.5 32.3L9.1 32.1L8.8 31.8L8.6 31.4L8.5 30.8L8.4 30.0L8.4 29.1L8.5 28.4L8.6 27.8L8.8 27.3L9.1 27.1L9.6 26.8L10.2 26.7L11.1 26.6L12.2 26.6L13.1 26.7L13.8 26.8L14.3 27.1L14.6 27.3L14.8 28.4L14.9 30.1L15.0 32.7L15.0 35.9L14.9 38.5L14.8 40.3L14.6 41.3L14.3 41.6L14.1 41.8L13.9 41.9L13.9 42.0L13.9 42.0L13.7 41.9L13.4 41.9ZM6.9 39.5L6.2 39.3L5.6 39.1L5.1 38.8L4.7 38.4L4.4 37.9L4.2 37.5L4.1 37.1L4.0 36.7L4.0 36.3L4.1 35.9L4.4 35.5L4.7 35.1L5.2 34.6L5.8 34.4L6.6 34.3L7.6 34.4L8.8 34.6L9.7 35.0L10.3 35.5L10.6 36.1L10.6 36.9L10.4 37.5L10.1 38.1L9.6 38.6L9.0 39.1L8.5 39.4L8.2 39.7L8.0 39.8L8.0 39.8L7.8 39.7L7.5 39.6ZM8.7 36.5L8.4 36.1L8.1 35.8L7.8 35.6L7.3 35.5L6.9 35.6L6.6 35.8L6.4 36.1L6.3 36.5L6.4 36.9L6.7 37.2L7.0 37.4L7.5 37.5L8.2 37.4L8.6 37.3L9.0 37.2L9.1 37.2L9.1 37.2L9.1 37.1L8.9 36.9Z" fill="#f0b73c" fill-rule="evenodd"/><path d="M74.2 44.3L73.8 43.8L73.2 43.7L72.4 44.0L71.4 43.9L70.4 43.5L69.8 42.9L69.3 42.2L68.5 42.0L67.5 41.8L66.9 41.1L66.3 40.2L64.8 40.1L62.9 40.2L62.0 39.4L61.8 38.2L60.4 37.9L58.4 38.1L57.3 37.9L56.7 37.1L56.3 35.3L56.1 33.0L56.5 31.4L57.6 30.6L59.3 30.0L61.4 29.9L62.9 30.9L63.9 32.6L64.5 33.5L65.0 33.8L65.8 33.7L66.9 33.6L68.0 34.6L69.1 36.1L70.2 36.3L71.2 35.8L71.9 36.1L72.4 37.0L72.4 37.8L72.1 38.3L72.3 38.3L73.1 38.1L74.6 39.5L76.7 41.3L78.3 40.1L79.5 37.1L80.2 35.8L80.5 35.9L80.8 36.7L81.0 37.7L81.3 37.2L81.8 36.0L82.7 35.5L83.9 35.4L84.4 34.3L84.7 32.5L85.5 31.8L86.7 31.9L88.1 32.4L89.5 33.6L90.1 35.5L90.1 37.8L89.7 39.1L89.1 39.5L88.0 39.5L86.7 39.3L86.3 39.7L86.3 40.6L85.5 41.0L84.4 41.3L83.7 42.1L83.3 43.0L82.9 43.2L82.5 42.9L81.9 43.2L81.1 43.8L79.7 43.9L77.9 43.7L76.3 44.0L75.0 44.6L74.5 44.9L74.4 44.8ZM66.3 37.0L63.6 35.3L61.9 34.4L61.3 34.1L61.8 34.6L63.4 35.8L64.8 36.8L66.2 37.6L67.5 38.3L68.7 38.7L69.5 39.1L70.1 39.3L70.4 39.4L70.4 39.4L69.8 39.0L68.4 38.2ZM85.7 37.6L86.6 36.9L87.2 36.3L87.4 36.0L87.3 35.9L86.8 36.0L86.3 36.2L85.8 36.6L85.2 37.1L84.5 37.7L84.1 38.2L83.9 38.5L83.9 38.7L84.0 38.7L84.2 38.7L84.3 38.7L84.3 38.7L84.3 38.7L84.5 38.5L85.0 38.1Z" fill="#5aa04f" fill-rule="evenodd"/></svg>
+          </div>
+
+          <div class="p-qa__list u-fade">
+            <div class="p-qa-item js-qa">
+              <button class="p-qa-item__q" type="button" aria-expanded="false">
+                <span class="p-qa-item__mark" aria-hidden="true">Q</span>
+                <span class="p-qa-item__label">駐車場はありますか？？</span>
+                <span class="p-qa-item__toggle" aria-hidden="true"></span>
+              </button>
+              <div class="p-qa-item__a">
+                <!-- 回答文はデザイン未収録のため仮テキスト -->
+                回答テキストが入ります。回答テキストが入ります。
+              </div>
+            </div>
+
+            <div class="p-qa-item js-qa">
+              <button class="p-qa-item__q" type="button" aria-expanded="false">
+                <span class="p-qa-item__mark" aria-hidden="true">Q</span>
+                <span class="p-qa-item__label">診療は予約制ですか？</span>
+                <span class="p-qa-item__toggle" aria-hidden="true"></span>
+              </button>
+              <div class="p-qa-item__a">回答テキストが入ります。回答テキストが入ります。</div>
+            </div>
+
+            <div class="p-qa-item js-qa">
+              <button class="p-qa-item__q" type="button" aria-expanded="false">
+                <span class="p-qa-item__mark" aria-hidden="true">Q</span>
+                <span class="p-qa-item__label">クレジットカードで支払いはできますか？</span>
+                <span class="p-qa-item__toggle" aria-hidden="true"></span>
+              </button>
+              <div class="p-qa-item__a">回答テキストが入ります。回答テキストが入ります。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ACCESS（病院情報） ================= -->
+      <section class="p-access" id="access">
+        <div class="inner">
+          <div class="p-access__card u-fade">
+            <img class="p-access__logo" src="images/logo_round.png" alt="MiU動物病院 ロゴ" width="240" height="240" loading="lazy" />
+            <p class="p-access__name">MiU動物病院</p>
+            <p class="p-access__address">三浦市南下浦町上宮田1528-15 1F</p>
+            <p class="p-access__tel">TEL：046-888-7030</p>
+
+            <div class="p-access__hours c-hours c-hours--plain">
+              <table class="c-hours__table">
+                <thead>
+                  <tr>
+                    <th scope="col">診療時間</th>
+                    <th scope="col">月</th><th scope="col">火</th><th scope="col">水</th>
+                    <th scope="col">木</th><th scope="col">金</th><th scope="col">土</th>
+                    <th scope="col">日/祝</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">9:00〜12:00</th>
+                    <td class="is-open"><span class="u-vh">診療</span></td>
+                    <td class="is-open"><span class="u-vh">診療</span></td>
+                    <td class="is-close">休診</td>
+                    <td class="is-open"><span class="u-vh">診療</span></td>
+                    <td class="is-open"><span class="u-vh">診療</span></td>
+                    <td class="is-open"><span class="u-vh">診療</span></td>
+                    <td class="is-open"><span class="u-vh">診療</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">16:00〜19:00</th>
+                    <td class="is-open"><span class="u-vh">診療</span></td>
+                    <td class="is-close">休診</td>
+                    <td class="is-close">休診</td>
+                    <td class="is-open"><span class="u-vh">診療</span></td>
+                    <td class="is-open"><span class="u-vh">診療</span></td>
+                    <td class="is-open"><span class="u-vh">診療</span></td>
+                    <td class="is-open"><span class="u-vh">診療</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="p-access__notes">
+              <p>※最終受付は診療時間の30分前まで</p>
+              <p>※火曜日午後・水曜日は終日休診</p>
+            </div>
+
+            <div class="p-access__map">
+              <iframe
+                title="MiU動物病院 所在地"
+                src="https://www.google.com/maps?q=MiU%E5%8B%95%E7%89%A9%E7%97%85%E9%99%A2%20%E4%B8%89%E6%B5%A6%E5%B8%82&output=embed"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="l-footer">
+      <div class="inner">
+        <div class="l-footer__inner">
+          <small class="l-footer__copy">&copy; MiU Animal Hospital.</small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================= 画面下固定CTA ================= -->
+    <div class="l-cta">
+      <a href="#" class="l-cta__btn l-cta__btn--reserve">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="6" y="2" width="12" height="20" rx="2.5"/><line x1="10" y1="18.5" x2="14" y2="18.5"/>
+        </svg>
+        WEB予約
+      </a>
+      <a href="tel:0468887030" class="l-cta__btn l-cta__btn--tel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.29 21 3 13.71 3 4.5c0-.55.45-1 1-1H7.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.23 1.01L6.6 10.8z"/>
+        </svg>
+        046-888-7030
+      </a>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
