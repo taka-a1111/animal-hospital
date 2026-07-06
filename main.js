@@ -4,6 +4,7 @@
  *  2. 全画面メニュー開閉
  *  3. 診療科目 説明モーダル（figコメント準拠：＋で説明文表示）
  *  4. Q&A アコーディオン
+ *  5. 読み込み時の順次ポップイン（MV・参考サイト準拠の演出）
  *  ※マニュアル：JSはmain.jsに集約・過剰なアニメーション不要
  * ============================================================ */
 (function () {
@@ -87,6 +88,16 @@
         if (e.key === 'Escape') closeDept();
       });
     }
+
+    /* ---------- 5. 読み込み時の順次ポップイン（MV） ---------- */
+    var pops = Array.from(document.querySelectorAll('[data-pop]')).sort(
+      function (a, b) { return a.dataset.pop - b.dataset.pop; }
+    );
+    pops.forEach(function (el, i) {
+      setTimeout(function () {
+        el.classList.add('is-act');
+      }, 250 + i * 220);
+    });
 
     /* ---------- 4. Q&A アコーディオン ---------- */
     document.querySelectorAll('.js-qa').forEach(function (item) {
